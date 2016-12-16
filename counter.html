@@ -1,0 +1,63 @@
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+
+<script>
+  function count() {
+    console.log("ASD");
+    var input = document.getElementById("input").value;
+    document.getElementById("output").innerHTML = input.split(" ").length;
+  };
+</script>
+
+
+<style>
+  h1 {
+    font-family: 'Space Mono', monospace;
+    text-align: center;
+  }
+  footer {
+    font-family: 'Space Mono', monospace;
+    text-align: center;
+    font-size: 14;
+  }
+  #upper {
+    width: 5%;
+    padding-left: 45%;
+  }
+  #lower {
+    padding-left: 20%;
+  }
+  #input {
+    width: 75%;
+    height: 70%;
+    text-align: center;
+  }
+  #bottom {
+    font-family: 'Space Mono', monospace;
+    padding-left: 50%;
+  }
+  button {
+    width: 10%;
+  }
+</style>
+</head>
+<body onload="count()">
+
+  <h1>Word Counter</h1>
+
+  <a id="upper">
+    <button onclick="count()">Count Words</button>
+  </a>
+  <p id="lower">
+      <textarea id="input">Internet Class is Awesome.</textarea>
+  </p>
+  <p id="bottom">
+    Words:<a id="output">0</a>
+  </p>
+
+
+  <footer>Programmed by Jonathan Force for internet-class.org</footer>
+
+</body>
+</html>
