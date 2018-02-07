@@ -1,0 +1,128 @@
+<html>
+<head>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <style>
+      p {
+        text-align: left;
+      }
+    </style>
+</head>
+<body>
+  <h1>Reference</h1>
+
+  <p>This page will be full of code examples and external resources for when you're
+    programming and forget how to do something</p>
+
+    <p><b>If statements</b></p>
+    <p>If statements should be used when your program needs to make decisions.</p>
+
+    This is a basic if statement.
+    <pre class="prettyprint">int x = 0;
+      if (x > 100) {
+        print("X is big!");
+      } else {
+        print("X is small");
+      }</pre>
+
+      Check if the variable input is equal to the variable passcode.
+      <pre class="prettyprint">
+        int passcode = 651;
+        int input = 123;
+        if (input == passcode) {
+          print("You typed the correct password");
+        }
+      </pre>
+
+
+      Draw a background if the mouse is on the left half of the screen.
+      <pre class="prettyprint">
+        if (mouseX < screenWidth / 2) {
+          background(255, 0, 0);
+        }
+      </pre>
+
+      <br>
+
+      <p><b>While loops</b></p>
+      <p>Use these when something needs to happen over and over.</p>
+
+      This prints every number between 0 and 100.
+      <pre class="prettyprint">
+        int x = 0;
+        while (x < 100) {
+          print(x);
+          x += 1;
+        }
+      </pre>
+
+      Draws circles accross the screen every 50 pixels.
+      <pre class="prettyprint">
+        int positionX = 0;
+        while (positionX < screenWidth) {
+          ellipse(positionX, 500, 20, 20)
+          positionX += 50;
+        }
+      </pre>
+
+      Sets total equal to 100 letter a's
+      <pre class="prettyprint">
+        String total = "";
+        int number = 0;
+        while (number < 100) {
+          total += "a";
+          number += 1;
+        }
+      </pre>
+
+      <p><b>Functions</b></p>
+      <p>Functions are commands. There are many built into Processing, but you will
+        also need <br> to know how to create your own.
+      <br>To call a function means to use the function.</p>
+
+        This is a function that will print "Yas" if x is greater than 50.
+        <pre class="prettyprint">
+          void maybePrint(int x) {
+            if (x > 50) {
+              print("Yas");
+            }
+          }
+        </pre>
+        This is how you can use that function.
+        <pre class="prettyprint">
+          maybePrint(60);
+        </pre>
+
+        <br>
+
+        This function will draw a circle to the screen at x, y.
+        <pre class="prettyprint">
+          void drawCircle(int x, int y) {
+            ellipse(x, y, 50, 50);
+          }
+        </pre>
+        Here's how you can call this function.
+        <pre class="prettyprint">
+          drawCircle(100, 50);
+        </pre>
+
+        <br>
+
+        This function will print out every number between 0 and x.
+        <pre class="prettyprint">
+          void printNumbersUpTo(int x) {
+            int y = 0;
+            while (x < x) {
+              print(y);
+              y += 1;
+            }
+          }
+        </pre>
+        This is how you call this function.
+        <pre class="prettyprint">
+          printNumbersUpTo(75);
+        </pre>
+</body>
+</html>
