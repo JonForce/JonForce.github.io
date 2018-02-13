@@ -124,5 +124,102 @@
         <pre class="prettyprint">
           printNumbersUpTo(75);
         </pre>
+
+        <p><b>Arrays</b></p>
+
+        <p>Arrays are created in the following way :<br>
+          <pre class="prettyprint">
+            int[] firstArray = new int[] { 99, 2, 5 };
+            int[] secondArray = new int[65];
+          </pre>
+          <br>
+          The first array is created with three elements, 99  2 and 5.
+          <br>The second array is created with 65 elements in it, and
+          they are all set to 0.
+        </p>
+
+        <p>Arrays can be used in the following way :<br>
+          The following code will increase the first element by 2. Then next,
+          it will print the first element.<br>
+          <pre class="prettyprint">
+            int[] ages = new int[] { 10, 12, 16 };
+            ages[0] += 2;
+            print(ages[0]);
+          </pre>
+        </p>
+
+        <p>Elements in an array are accessed by using their <b>indexes</b> :<br>
+          <pre class="prettyprint">
+            int[] array = new int[50];
+            array[0] = 10;
+            array[1] = 50;
+            array[2] = 5;
+            array[0] = array[0] + array[1] + array[2];
+            print(array[0]);
+          </pre>
+        </p>
+
+        <p>We can create an array of anything, here's some examples :<br>
+          <pre class="prettyprint">
+            String[] array = new String[10];
+            array[0] = "Moose";
+            array[1] = " is an awesome snake";
+            array[2] = array[0] + array[1];
+            print(array[2]);
+          </pre>
+        </p>
+
+        <p>Here's how you print everything in an array :<br>
+          <pre class="prettyprint">
+            int[] numbers = new int[] { 999, 888, 777, 1, 2, 3 };
+
+            int i = 0;
+            while (i < numbers.length) {
+              print(numbers[i]);
+              i += 1;
+            }
+          </pre>
+        </p>
+
+
+
+        <br><b>Program Examples</b>
+
+        <br>This program allows you to control the dot with keys.
+        <pre class="prettyprint">
+                    int x = 100, y = 100;
+          int speed = 3;
+
+          void setup() {
+            size(800, 600);
+          }
+
+          void draw() {
+            background(255, 255, 255);
+
+            fill(255, 0, 0);
+
+            updatePosition();
+
+            ellipse(x, y, 10, 10);
+          }
+
+          void updatePosition() {
+              if (keyPressed) {
+                if (key == 'w') {
+                  y -= speed;
+                }
+                if (key == 's') {
+                  y += speed;
+                }
+                if (key == 'a') {
+                  x -= speed;
+                }
+                if (key == 'd') {
+                  x += speed;
+                }
+              }
+          }
+        </pre>
 </body>
 </html>
