@@ -221,5 +221,43 @@
               }
           }
         </pre>
+
+        <p>This is the rain program<br>
+          <pre class="prettyprint">
+          int[] raindrops = new int[50];
+          float[] speed = new float[50];
+
+          void setup() {
+            size(500, 500);
+
+            int i = 0;
+            while (i < raindrops.length) {
+              speed[i] = 1;
+              raindrops[i] = (int) random(-height, 0);
+              i += 1;
+            }
+          }
+
+          void draw() {
+            background(255, 255, 255);
+
+            fill(0, 0, 255);
+
+            int i = 0;
+            while (i < raindrops.length) {
+              ellipse(width * ((1.0 * i) / raindrops.length), raindrops[i], 10, 10);
+              raindrops[i] += speed[i];
+              speed[i] *= 1.03;
+
+              if (raindrops[i] > 500) {
+                raindrops[i] = (int) random(-height, 0);
+                speed[i] = 1;
+              }
+              i += 1;
+            }
+
+          }
+        </pre>
+      </p>
 </body>
 </html>
