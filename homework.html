@@ -11,77 +11,93 @@
     </style>
 </head>
 <body>
-  <h1>Homework 3</h1>
+  <h1>Homework 4</h1>
 
-  <p>Please complete this homework before next class. I will be posting the<br/>
-    solutions after next class.</p>
+  <p>Please complete this homework before next class.</p>
   <br>
 
-  <p><b>Problem set A</b></p>
+  <br>
+  <p><b>Basic Review Problems</b></p>
 
-  <p>Import the red Enemy dodging program and add as many of the following features as you can :<br>
-    - Make it so that there is a score. Do this by having a integer score variable<br>
-    that increases as the game goes on. Make it so that when the game is over,<br>
-    the score is printed.<br>
-    - Make it so that you can click to restart the game.<br>
-    - Try making it so that the game starts off easy, and then gets harder.
-  </p>
+  <p>1. Create an integer called "x" that is equal to a random integer.<br>
+      Use a while loop to print every number between 0 and x.</p>
+  <p>2. Create two Strings, x and y. x should equal "Cat" and y should equal "Dog".<br>
+    Add the Strings together and print them.</p>
+  <p>3. Create an integer variable called "x" that is equal to a random number.<br>
+      If x is less than 100, print "LOW". If x is greater than or equal to 100<br>
+      print "HIGH".</p>
 
-  <p><b>Part B</b></p>
+  <br>
+  <p><b>Array Review Problems</b></p>
 
-  <p>For part B, you'll be writing a small game from scratch.
-    Good luck :) !</p>
+  <p>1. Create an array of Strings of size 50. Every String in the array should be<br>
+  the String "Moose".</p>
+  <p>2. Write code to print every String in the array. Use a while loop for this.</p>
+  <p>3. Create an array of 50 integers. Fill the array with all of the numbers<br>
+  between 0 and 50.</p>
+  <p>4. Create an integer called "sum". Add all of the numbers in the previous array<br>
+  to sum, and then print sum.</p>
 
-  <p>The game will work like this :<br>
-    You will control a circle. There will be green circles
-    <br>all over the screen. The objective of the game will be collect the
-    green circles to get points.<br>
+
+  <br>
+  <p><b>Function Review Prolems</b></p>
+
+  <p>1. Create a function call printN() that takes in an integer "n".<br>
+      The function should print every number between 0 and n.<br>
+      EX : If we give the function the following input :<br>
+      <pre class="prettyprint">
+        printN(5);
+      </pre>
+      It should print :<br>
+      <pre class="prettyprint">0 1 2 3 4 5</pre>
+    </p>
+    <p>2. Create a function called "createArray()" that takes in one integer parameter, "n".<br>
+        The function should return an integer array of size "n". Every element in<br>
+        the array should be equal to a random integer.
+      </p>
+      <p>3. Create a function called "printSometimes()". The function should take in<br>
+            a String "x" as a parameter. It should print "x" ONLY if x.length() is<br>
+            greater than 4.</p>
+      <p>4. Create a function called "printArray()" that takes in an array of integers as a parameter.<br>
+          It should print every integer in the array.<br>
+          If you're successfull, you could use this code to test your function :<br>
+          <pre class="prettyprint">
+          void setup() {
+            int[] array = new int[] { 1, 6, 87, 2 };
+            printArray(array);
+          }
+          </pre>
+        </p>
+
+
+  <p><b>Class Review Problems</b></p>
+  <p>1. Create a class called Rectangle that represents a Rectangle.
+        <br>Rectangles have an x, y, width and height.
   </p>
-  <p>The first step will be to create a class that represents the "targets".
-    <br>Targets are the green circles that your character will have to collect.
-    <br>The class Target should have the following properties :<br>
-    - positionX and positionY<br>
-    - sizeX and sizeY
-  </p>
-  <p>The next step will be get the code running that allows you to
-    move a circle around the screen. This is available on the google doc.<br>
-  </p>
-  <p>Next, we should create an array of Targets. Look at code that we've written
-    in the past for help.
-  </p>
-  <p>We have to initialize all of the Targets in the array. What this means is<br>
-    that currently the array is empty. You have to fill it with objects.<br>
-    We can do that by using a loop to go through and create a new target for every
-    slot in the array.<br>
-    Refer to the red Enemy game for an example on how to do this.<br>
-    We only need to do this once, so it should happen in the setup function.
-  </p>
-  <p>Next we need to draw the Targets on the screen. In the draw function,
-    write a <br>loop that goes through the Targets array and draws an ellipse
-    for every target onto the screen.
-  </p>
-  <p>Finally, we need to make it so that if the player is near any circle,
-    the circle disappears.</p>
-  <p>To do this, first add a new variable to the Target class called "visible".<br>
-    This variable should be a boolean. The variable will be true when the target
-    is visible, and false when the target is gone.<br>
-    "visible" should start off as true by default.
-  </p>
-  <p>Next, make it so that each Target only gets drawn if its visible property<br>
-    is set to true.<br>
-    Ex :<br>
-    if (targets[i].visible == true)
-  </p>
-  <p>Finally, we need to set any target that is near our character to be invisible.<br>
-    In the loop where we draw the character, check if the current Target is close to<br>
-    character by using the distance function.<br>
-    If the Target is, set its "visible" property to be false like so :<br>
-    targets[i].visible = false;
-  </p>
-  <p>If you have time, try adding in a score to the game!<br>
-    Or make it so that targets spawn in randomly when you touch them.<br>
-    Or make it so that there is a time limit.<br>
-  </p>
+  <p>2. Next, write code to create a single rectangle
+      and draw that rectangle onto the screen.</p>
+  <p>3. Modify your rectangle class so that it has a random color.<br>
+        This means that the Rectangle class will need an r, g, and b.</p>
+  <p>4. Create a method in your Rectangle class called "randomize()".<br>
+        This method should set the Rectangle's x, y, width, height, and color
+        to be random values.<br>
+        This code could be used to test your method :<br>
+        <pre class="prettyprint">
+        void draw() {
+          Rectangle r = new Rectangle();
+          r.randomize();
+          fill(r.r, r.g, r.b);
+          rect(r.x, r.y, r.width, r.height);
+        }
+        </pre>
+      </p>
+  <p>5. This one is hard. Create an array of Rectangles in the setup function.<br>
+        Fill the array with Rectangles. Call the randomize() method on each Rectangle.<br>
+        Draw every Rectangle in the array to the screen in the draw() function.</p>
+
+
+
+
 
 
 </body>

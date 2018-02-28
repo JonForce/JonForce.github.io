@@ -1,0 +1,88 @@
+<html>
+<head>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <style>
+      p {
+        text-align: left;
+      }
+    </style>
+</head>
+<body>
+  <h1>Homework 3</h1>
+
+  <p>Please complete this homework before next class. I will be posting the<br/>
+    solutions after next class.</p>
+  <br>
+
+  <p><b>Problem set A</b></p>
+
+  <p>Import the red Enemy dodging program and add as many of the following features as you can :<br>
+    - Make it so that there is a score. Do this by having a integer score variable<br>
+    that increases as the game goes on. Make it so that when the game is over,<br>
+    the score is printed.<br>
+    - Make it so that you can click to restart the game.<br>
+    - Try making it so that the game starts off easy, and then gets harder.
+  </p>
+
+  <p><b>Part B</b></p>
+
+  <p>For part B, you'll be writing a small game from scratch.
+    Good luck :) !</p>
+
+  <p>The game will work like this :<br>
+    You will control a circle. There will be green circles
+    <br>all over the screen. The objective of the game will be collect the
+    green circles to get points.<br>
+  </p>
+  <p>The first step will be to create a class that represents the "targets".
+    <br>Targets are the green circles that your character will have to collect.
+    <br>The class Target should have the following properties :<br>
+    - positionX and positionY<br>
+    - sizeX and sizeY
+  </p>
+  <p>The next step will be get the code running that allows you to
+    move a circle around the screen. This is available on the google doc.<br>
+  </p>
+  <p>Next, we should create an array of Targets. Look at code that we've written
+    in the past for help.
+  </p>
+  <p>We have to initialize all of the Targets in the array. What this means is<br>
+    that currently the array is empty. You have to fill it with objects.<br>
+    We can do that by using a loop to go through and create a new target for every
+    slot in the array.<br>
+    Refer to the red Enemy game for an example on how to do this.<br>
+    We only need to do this once, so it should happen in the setup function.
+  </p>
+  <p>Next we need to draw the Targets on the screen. In the draw function,
+    write a <br>loop that goes through the Targets array and draws an ellipse
+    for every target onto the screen.
+  </p>
+  <p>Finally, we need to make it so that if the player is near any circle,
+    the circle disappears.</p>
+  <p>To do this, first add a new variable to the Target class called "visible".<br>
+    This variable should be a boolean. The variable will be true when the target
+    is visible, and false when the target is gone.<br>
+    "visible" should start off as true by default.
+  </p>
+  <p>Next, make it so that each Target only gets drawn if its visible property<br>
+    is set to true.<br>
+    Ex :<br>
+    if (targets[i].visible == true)
+  </p>
+  <p>Finally, we need to set any target that is near our character to be invisible.<br>
+    In the loop where we draw the character, check if the current Target is close to<br>
+    character by using the distance function.<br>
+    If the Target is, set its "visible" property to be false like so :<br>
+    targets[i].visible = false;
+  </p>
+  <p>If you have time, try adding in a score to the game!<br>
+    Or make it so that targets spawn in randomly when you touch them.<br>
+    Or make it so that there is a time limit.<br>
+  </p>
+
+
+</body>
+</html>
