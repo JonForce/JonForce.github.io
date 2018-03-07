@@ -19,81 +19,54 @@
   <br>
   <p><b>Basic Review Problems</b></p>
 
-  <p>1. Create an integer called "x" that is equal to a random integer.<br>
-      Use a while loop to print every number between 0 and x.</p>
-  <p>2. Create two Strings, x and y. x should equal "Cat" and y should equal "Dog".<br>
-    Add the Strings together and print them.</p>
-  <p>3. Create an integer variable called "x" that is equal to a random number.<br>
-      If x is less than 100, print "LOW". If x is greater than or equal to 100<br>
-      print "HIGH".</p>
-
-  <br>
-  <p><b>Array Review Problems</b></p>
-
-  <p>1. Create an array of Strings of size 50. Every String in the array should be<br>
-  the String "Moose".</p>
-  <p>2. Write code to print every String in the array. Use a while loop for this.</p>
-  <p>3. Create an array of 50 integers. Fill the array with all of the numbers<br>
-  between 0 and 50.</p>
-  <p>4. Create an integer called "sum". Add all of the numbers in the previous array<br>
-  to sum, and then print sum.</p>
+  <p>1. Create an integer, x that is a random number between 2 and 10.</p>
+  <p>2. Create a second integer, y that is a random number between 11 and 50</p>
+  <p>3. Write a program that prints all of the numbers between x and y.</p>
+  <p>4. Write a program that adds all of the numbers between 0 and 100.
+      (Including the number 100). It should print the result.</p>
+  <p>5. Write a program that draws a background color of blue if the mouse in
+    on the lower half of the screen, and a background color of red if the<br>
+    mouse is on the upper half of the screen.</p>
 
 
   <br>
-  <p><b>Function Review Prolems</b></p>
+  <p><b>Array List Review Problems</b></p>
 
-  <p>1. Create a function call printN() that takes in an integer "n".<br>
-      The function should print every number between 0 and n.<br>
-      EX : If we give the function the following input :<br>
-      <pre class="prettyprint">
-        printN(5);
-      </pre>
-      It should print :<br>
-      <pre class="prettyprint">0 1 2 3 4 5</pre>
-    </p>
-    <p>2. Create a function called "createArray()" that takes in one integer parameter, "n".<br>
-        The function should return an integer array of size "n". Every element in<br>
-        the array should be equal to a random integer.
-      </p>
-      <p>3. Create a function called "printSometimes()". The function should take in<br>
-            a String "x" as a parameter. It should print "x" ONLY if x.length() is<br>
-            greater than 4.</p>
-      <p>4. Create a function called "printArray()" that takes in an array of integers as a parameter.<br>
-          It should print every integer in the array.<br>
-          If you're successfull, you could use this code to test your function :<br>
-          <pre class="prettyprint">
-          void setup() {
-            int[] array = new int[] { 1, 6, 87, 2 };
-            printArray(array);
-          }
-          </pre>
-        </p>
+  <p>1. Create an ArrayList that stores Strings. Add the Strings "Moose", "Awesome", "Snake"<br>
+    to the list.</p>
+  <p>2. Create an ArrayList that can store Integers. Next, add all of the numbers<br>
+    between 0 and x to the ArrayList (where x is a random number between 10 and 50).</p>
+    <p>3. Next, write a program that prints all of the numbers in the list you just created.</p>
+  <p>4. Create an ArrayList that stores Inegers. Add all of the integers between 0 and
+    50 to the list.<br> Next, remove all of the integers between 10 and 20 from the list.<br>
+    Finally, write code that prints the list.</p>
+  <p>5. Create a class called Color. Color should have a R, G, and B integer values.<br>
+      Next, create an ArrayList that stores Colors and add 10 random Colors to it.</p>
+  <p>6. [This one is hard] Given the ArrayList of random colors in the last problem,<br>
+      how can we select a random color out of the list (and use it as our background color)?</p>
 
+
+  <br>
+  <p><b>Timining Problems</b></p>
+
+  <p>1. Write a program that prints out, "Tracer" every one second.</p>
+  <p>2. [This one is hard] Write a program that changes to a random background color<br>
+    every 2 seconds</p>
+  <p>3. [This one is hard] Print "Hi" every draw() for one second, then "Bye" every draw() for one second<br>
+    then reset.</p>
 
   <p><b>Class Review Problems</b></p>
-  <p>1. Create a class called Rectangle that represents a Rectangle.
-        <br>Rectangles have an x, y, width and height.
-  </p>
-  <p>2. Next, write code to create a single rectangle
-      and draw that rectangle onto the screen.</p>
-  <p>3. Modify your rectangle class so that it has a random color.<br>
-        This means that the Rectangle class will need an r, g, and b.</p>
-  <p>4. Create a method in your Rectangle class called "randomize()".<br>
-        This method should set the Rectangle's x, y, width, height, and color
-        to be random values.<br>
-        This code could be used to test your method :<br>
-        <pre class="prettyprint">
-        void draw() {
-          Rectangle r = new Rectangle();
-          r.randomize();
-          fill(r.r, r.g, r.b);
-          rect(r.x, r.y, r.width, r.height);
-        }
-        </pre>
-      </p>
-  <p>5. This one is hard. Create an array of Rectangles in the setup function.<br>
-        Fill the array with Rectangles. Call the randomize() method on each Rectangle.<br>
-        Draw every Rectangle in the array to the screen in the draw() function.</p>
+  <p>1. Create a class called Circle. Circles have the following properties :<br>
+      Three integers, r, g, and b, that represent their color.<br>
+      Two floats, x, and y, that represent their position.</p>
+  <p>2. Create a constructor in the class. When the constructor is called, it should<br>
+    set the x, y, r, g, and b to all be random values.</p>
+  <p>3. Create an ArrayList that can store Circles.</p>
+  <p>4. In the setup function, create one Circle and put it into the list.</p>
+  <p>5. In the draw function, write a loop that draws all of the circles in the list
+    to the screen. Remember to use the Circles' fill colors.</p>
+  <p>6. [This part is hard] Write code so that every 1 second, it adds another Circle
+    to the list.</p>
 
 
 

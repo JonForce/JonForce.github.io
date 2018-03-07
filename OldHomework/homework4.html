@@ -1,0 +1,104 @@
+<html>
+<head>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <style>
+      p {
+        text-align: left;
+      }
+    </style>
+</head>
+<body>
+  <h1>Homework 4</h1>
+
+  <p>Please complete this homework before next class.</p>
+  <br>
+
+  <br>
+  <p><b>Basic Review Problems</b></p>
+
+  <p>1. Create an integer called "x" that is equal to a random integer.<br>
+      Use a while loop to print every number between 0 and x.</p>
+  <p>2. Create two Strings, x and y. x should equal "Cat" and y should equal "Dog".<br>
+    Add the Strings together and print them.</p>
+  <p>3. Create an integer variable called "x" that is equal to a random number.<br>
+      If x is less than 100, print "LOW". If x is greater than or equal to 100<br>
+      print "HIGH".</p>
+
+  <br>
+  <p><b>Array Review Problems</b></p>
+
+  <p>1. Create an array of Strings of size 50. Every String in the array should be<br>
+  the String "Moose".</p>
+  <p>2. Write code to print every String in the array. Use a while loop for this.</p>
+  <p>3. Create an array of 50 integers. Fill the array with all of the numbers<br>
+  between 0 and 50.</p>
+  <p>4. Create an integer called "sum". Add all of the numbers in the previous array<br>
+  to sum, and then print sum.</p>
+
+
+  <br>
+  <p><b>Function Review Prolems</b></p>
+
+  <p>1. Create a function call printN() that takes in an integer "n".<br>
+      The function should print every number between 0 and n.<br>
+      EX : If we give the function the following input :<br>
+      <pre class="prettyprint">
+        printN(5);
+      </pre>
+      It should print :<br>
+      <pre class="prettyprint">0 1 2 3 4 5</pre>
+    </p>
+    <p>2. Create a function called "createArray()" that takes in one integer parameter, "n".<br>
+        The function should return an integer array of size "n". Every element in<br>
+        the array should be equal to a random integer.
+      </p>
+      <p>3. Create a function called "printSometimes()". The function should take in<br>
+            a String "x" as a parameter. It should print "x" ONLY if x.length() is<br>
+            greater than 4.</p>
+      <p>4. Create a function called "printArray()" that takes in an array of integers as a parameter.<br>
+          It should print every integer in the array.<br>
+          If you're successfull, you could use this code to test your function :<br>
+          <pre class="prettyprint">
+          void setup() {
+            int[] array = new int[] { 1, 6, 87, 2 };
+            printArray(array);
+          }
+          </pre>
+        </p>
+
+
+  <p><b>Class Review Problems</b></p>
+  <p>1. Create a class called Rectangle that represents a Rectangle.
+        <br>Rectangles have an x, y, width and height.
+  </p>
+  <p>2. Next, write code to create a single rectangle
+      and draw that rectangle onto the screen.</p>
+  <p>3. Modify your rectangle class so that it has a random color.<br>
+        This means that the Rectangle class will need an r, g, and b.</p>
+  <p>4. Create a method in your Rectangle class called "randomize()".<br>
+        This method should set the Rectangle's x, y, width, height, and color
+        to be random values.<br>
+        This code could be used to test your method :<br>
+        <pre class="prettyprint">
+        void draw() {
+          Rectangle r = new Rectangle();
+          r.randomize();
+          fill(r.r, r.g, r.b);
+          rect(r.x, r.y, r.width, r.height);
+        }
+        </pre>
+      </p>
+  <p>5. This one is hard. Create an array of Rectangles in the setup function.<br>
+        Fill the array with Rectangles. Call the randomize() method on each Rectangle.<br>
+        Draw every Rectangle in the array to the screen in the draw() function.</p>
+
+
+
+
+
+
+</body>
+</html>
