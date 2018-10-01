@@ -11,35 +11,51 @@
     </style>
 </head>
 <body>
-  <h1>Homework 2, Year 2</h1>
+  <h1>Homework 3, Year 2</h1>
 
-  <p><b>Have these done by next class</b></p>
+  <p><b>Have these done by next class. Email me your working code.</b></p>
 
-  <p><b>Basic Problems</b></p>
-  <p>Use google if you need help!</p>
+  <p><b>Prime Number Problem</b></p>
 
-  <p>1.) What is breadth first search?</p>
-  <p>2.) What is depth first search?</p>
-  <p>3.) Why can't depth first graph search be used to write a good chess AI?</p>
-  <p>4.) If we were to use a search algorithm for a tree of states with no loops,
-    what search algorithm would be best? Why?</p>
-  <p>5.) What's the difference between tree search and graph search?</p>
+  <p>Your first homework problem is going to be writing a function
+    <br>that takes in an integer i, and returns true if the integer is
+    <br>a prime number.</p>
+  <p>A prime number is a number that is only divisible by 1 and itself.</p>
+  <p>Please use the internet as a resource to solve this problem!
+    <br>You can even copy code if you'd like. But the only rule is that your
+    <br>solution must be in Processing. Submitting code that does not work
+    <br>in Processing will not recieve any credit.</p>
+  <p>There are lots of ways to solve this problem. Use solutions implemented
+    <br>in other languages online for inspiration!</p>
+  <p>One way to implement the solution is :
+    <br>if you want to find out if the integer n is prime,
+    <br>divide n by every number between n-1 and 2.
+    <br>If any of those divisions result in a number that does not have
+    <br>a decimal, n is not prime.</p>
+  <p>The function must return a boolean. It must take in exactly 1 int as a parameter</p>
 
-  <p><b>Implementation Problems</b></p>
 
-  <p>1.) Write a class called Node that has the following members :
-      <br>- a Node variable called 'next'
-      <br>- a boolean variable called 'goal' (defaults to false)
-  <p>2.) Create 4 nodes objects, a, b, c, and d.</p>
-  <p>3.) Set :
-      <br>a.next = b
-      <br>b.next = c
-      <br>c.next = d
-  <p>4.) Set d.goal = true
-  <p>5.) Create a function called depthFirstSearch(...) that takes in
-          a Node start as a parameter and searches for the goal node.
-          <br> It should print out each node as it searches and return true
-          <br> when it finds a solution.
 
+  <p><b>Space Background</b></p>
+
+  <p>The next problem can be programmed however you want.
+    <br>However, I will give you tips on how to accomplish it.</p>
+
+  <p>The goal is to create a white background with back dots on the screen.
+    <br>The black dots should move right accross the screen at random speeds,
+      <br>so that each dot has a random speed that it moves at accross the screen</p>
+  <p>The desired effect is that the dots will create a parrallax effect by
+    <br>moving at different speeds. It will make the screen look deep.</p>
+  <p>You can draw the dots on the screen using ellipse(...). Make their radiuses 5 by 5.</p>
+  <p>You're welcome to implement this however you'd like, but here are some ideas :<br>
+    You should probably create a class, Dot that can be used to represent each dot on the screen.
+    <br>Dot should probably have variables x, y, and speed.
+    <br>You should create many dots, and then draw them in the draw function.
+    <br>Move them accross the screen by adding their speed to their x.
+    <br>Don't forget to initialize their x, y, and speed variables!
+    <br>When a dot gets off the right side of the screen, you'll have to move
+      it off the left side of the screen.
+    </p>
+  
 </body>
 </html>
