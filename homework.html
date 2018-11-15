@@ -11,20 +11,51 @@
     </style>
 </head>
 <body>
-  <h1>Homework 6, Year 2</h1>
+  <h1>Homework, Year 2</h1>
 
-  <p><b>Have these done by next class.</b></p>
+  <p><b>The focus of this homework will be setting up the Intellij spark web project</b></p>
 
-  <p>Create a Java file with a main method. Use the System.out.println to print your name.
-    <br>Run the file and make sure it works. If your environment is not set up correctly,
-    <br>try to fix it! Google the error message you get.</p>
+  <p>If you run into errors please try the following :
+    <br>Rebuild the project. It should be under the Build tab up top.
+    <br>Google error messages
+    <br>Email me with what specifically is not working
+  </p>
 
-  <p>Create a second file in the same package with the name B.java. Create a class B
-    <br>in that file. Add the integer attribute x that equals 123 to that class B.
-    <br>In your main file, create an instance of class B (B test = new B();) and print
-    <br>the value of b.x</p>
+  <p>The goal of this homework will be downloading a pre-setup web project I made for you all</p>
+  <p>To start, <a href="https://drive.google.com/open?id=1lVFtPHWuUaiCWchZIB4X1w-bdmOdnzX-">
+    download the zipped project</a></p>
+  <p>Next, drag the zip file someplace safe on your computer. You will need it again.</p>
+  <p>Now, unzip the zip file someplace that you will remember. Maybe a folder called "Projects"</p>
+  <p>Next, you have to open the project using intellij. Launch intellij and then go to File->Open</p>
+  <p>Navigate to the unzipped folder. This is your project. Select the project's folder and press open</p>
 
-  <p>Watch the following video on Java Access Modifiers : https://www.youtube.com/watch?v=0JBqL99wjSE</p>
+  <p>Now that you have the project open in Intellij, you should be able to run the project (I hope!)</p>
+  <p>This is where you might run into problems. If the project won't run for whatever reason, try to fix it!
+    <br>Do not give up! This is part of the homework</p>
+  <p>If you are able to run the project successfully, you should get a lot of red text that says things like this :</p>
+
+  <p style="color:red">
+<br>[Thread-0] INFO org.eclipse.jetty.util.log - Logging initialized @208ms to org.eclipse.jetty.util.log.Slf4jLog
+<br>[Thread-0] INFO spark.embeddedserver.jetty.EmbeddedJettyServer - == Spark has ignited ...
+<br>[Thread-0] INFO spark.embeddedserver.jetty.EmbeddedJettyServer - >> Listening on 0.0.0.0:4567
+<br>[Thread-0] INFO org.eclipse.jetty.server.Server - jetty-9.4.6.v20170531
+<br>[Thread-0] INFO org.eclipse.jetty.server.session - DefaultSessionIdManager workerName=node0
+<br>[Thread-0] INFO org.eclipse.jetty.server.session - No SessionScavenger set, using defaults
+<br>[Thread-0] INFO org.eclipse.jetty.server.session - Scavenging every 600000ms
+<br>[Thread-0] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@1f36d7f{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+<br>[Thread-0] INFO org.eclipse.jetty.server.Server - Started @326ms</p>
+
+  <p>Go to your web browser on your computer and type in http://localhost:4567/
+    <br>This make a request to your web server! No one else will be able make request to your
+    <br>web server yet because you have firewalls protecting your computer IE: no port forwarding set up.
+    <br>But that's ok! Now you can start work on your dynamic web application.
+  </p>
+
+  <p>Modify the code so that when a request is made to the server it returns a different web page.
+    <br>Please, get creative with this part.</p>
+
+  <p>Extra Credit : Modify the code for the server so that it returns a randomly generated web page with
+    each request! Use a java.util.Random for a random number generator for example.</p>
 
 </body>
 </html>
