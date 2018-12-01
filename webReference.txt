@@ -1,0 +1,44 @@
+package driver;
+
+import java.util.ArrayList;
+
+import static spark.Spark.*;
+
+public class Driver {
+
+    private ArrayList<String> messages = new ArrayList<String>();
+
+    public static void main(String[] args) {
+        new Driver().start();
+    }
+
+    void start() {
+        get("/", (req, res) -> {
+            String messagesString = "";
+            messagesString += "<textarea style=\"width:70%; height:50%\">";
+            for (String message : messages) {
+                messagesString += message;
+                messagesString += "\n";
+            }
+            messagesString += "</textarea>";
+            return "<html>" +
+                    "<h1 style=\"text-align:center\">Twetter</h1>" +
+                    messagesString +
+                    "<p style=\"position:absolute;bottom:1%\">" +
+                    "<form method=\"POST\" action=\"/postmessage\">" +
+                    "<input name=\"message\" type=\"text\">" +
+                    "<input type=\"submit\">" +
+                    "</form>" +
+                    "</p>" +
+                    "</html>";
+        });
+
+        post("/postmessage", (req, res) -> {
+            System.out.println("Recieved message : " + req.queryParams("message"));
+            messages.add(req.queryParams("message").replace("<", ""));
+
+            res.redirect("/");
+            return res;
+        });
+    }
+}
