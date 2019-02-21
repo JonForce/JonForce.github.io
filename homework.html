@@ -13,22 +13,43 @@
 <body>
   <h1>Homework, Year 2</h1>
 
-  <p><b>These are some problems to keep your Java programming fresh.</b></p>
+  <p><b>This assignment will test your ability to use AJAX to communicate
+    with the server from the client.</b></p>
 
-  <p>1. Write a java method that can check if a number is prime or not.
-      <br>Be sure to test your method in main!</p>
+  <p>1. In the server, when the client requests the main page,
+        <br>return a button called "increase" as well as a number
+        <br>above that should start at 0.</p>
 
-  <p>2. Write a program that takes in an input looking like this :
-        <br>"{a:1, b:1513, c:1003, f:151}"
-        <br>And can conver that JSON to a HashMap of String keys
-        <br>and int values.
-  <br>This one will not be easy. You can write this program however you
-    <br>want, but please test your code with multiple inputs.</p>
+  <p>2. Next, make it so that when a user presses that button, the
+      <br>number increases. This should be pretty easy.</p>
 
-  <p><a href="https://www.youtube.com/watch?v=Hb_IVskG_Ck">click here</a>
-      <br>That video is a decent reference for working with sttrings to
-    <br>solve problem #2.</p>
+  <p>3. Finally, add a script into the client that sends the
+    <br>server a request to check what the number is on the server and set
+    <br>the number on the screen to be that. This way, the user wont
+    <br>have to refresh the page to see how many people have pressed the button.</p>
+  <p>Part 3 will require that you modify the code that is sent to the client. You
+    <br>really need to add in a timer that every 100 milliseconds (or whatever time increment),
+    <br>requests an update from the server. Then you need to have a post location
+    <br>that returns the new number of times the buttons have been pressed.</p>
 
+  <p> Example of AJAX request in javascript  <pre class="prettyprint">
+    $.ajax({
+url: "/post",
+type: "POST",
+data: {clicked:click},
+success: function(data){
+console.log(data);
+shrooms = JSON.parse(data).list;
+}
+});
+</pre>
+</p>
+
+<p>Dont forget to include the AJAX script!
+  &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+</p>
+
+  <p>
     <p>Copy and paste your code into an email.</p>
 
 </body>
